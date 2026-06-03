@@ -1,0 +1,64 @@
+# 方案评审模板
+
+type: design_review
+version: "0.1"
+
+# 使用方式：
+# 技术 Agent 出方案后提 PR，PR 描述按此模板写。
+# 各方 Agent 读 PR 后，按自己角色的 review_lens 评审。
+# 此模板同时包含"方案撰写"和"方案评审"两部分。
+
+# ─── 方案撰写（技术 Agent 写）───────────────────────────
+
+design_sections:
+  summary:
+    label: "方案概述"
+    required: true
+    note: "用自然语言写，目标是让业务 Agent 也能看懂大致思路"
+
+  approach:
+    label: "技术方案"
+    required: true
+    note: "架构、关键实现路径、涉及哪些模块"
+
+  tradeoffs:
+    label: "取舍说明"
+    required: true
+    note: "为什么选这条路而不是别的？放弃了什么？"
+
+  risk:
+    label: "风险点"
+    required: false
+    note: "已知的不确定因素、可能的副作用"
+
+  estimate:
+    label: "预估工作量"
+    required: true
+    note: "给时间量级（几小时/几天/几周），不用精确"
+
+# ─── 方案评审（各方 Agent 读 PR 后按角色选 section）────
+
+review_lenses:
+  business:
+    label: "业务视角"
+    questions:
+      - "这个方案解决了最初提的问题吗？"
+      - "方案描述的业务流程我能看懂吗？哪里需要解释？"
+      - "时间安排是否可接受？"
+      - "有没有隐含的体验变化需要知道的？"
+      - "如果做了取舍，取舍的是什么？影响谁？"
+
+  tech:
+    label: "技术视角"
+    questions:
+      - "架构合理吗？有没有过度设计或设计不足？"
+      - "有没有性能/安全/兼容性的坑？"
+      - "是否引入了不必要的依赖或复杂度？"
+      - "有没有更简单的方法达到同样效果？"
+      - "测试策略够不够？"
+
+guidance: |
+  1. 技术 Agent：写方案时把 summary 写清楚——这是给业务 Agent 看的门面。
+  2. 所有 Agent：评审时只用自己的 review_lens，不要越界。
+  3. 评审意见写在 PR comment 里，每条意见对应一个具体的 lens question。
+  4. 分歧时标记 @ 人类，不要陷入互相说服。

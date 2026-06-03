@@ -1,0 +1,58 @@
+# 报 Bug 模板
+
+type: bug_report
+version: "0.1"
+
+fields:
+  title:
+    label: "一句话描述"
+    required: true
+    example: "月度汇总报表查询超时"
+
+  symptom:
+    label: "看到了什么现象"
+    required: true
+    prompt: "你看到了什么？哪里不对？"
+    example: "打开报表后页面一直转圈，最终显示加载失败"
+
+  expected:
+    label: "本来应该怎样"
+    required: true
+    prompt: "正常情况应该是什么样的？"
+    example: "3 秒内显示报表数据"
+
+  steps_to_reproduce:
+    label: "怎么触发"
+    required: true
+    prompt: "一步一步告诉我你是怎么操作的？"
+    example:
+      - "进入财务模块"
+      - "点击月度汇总报表"
+      - "等待后报错"
+
+  environment:
+    label: "使用环境"
+    required: false
+    prompt: "用的什么浏览器/设备？在什么网络环境下？"
+    example: "Chrome 浏览器，公司内网"
+
+  severity:
+    label: "严重程度"
+    required: true
+    options: ["critical（系统瘫痪）","high（核心功能受阻）","medium（有影响但有绕过方式）","low（小问题）"]
+    note: "Agent 根据人的描述初步判断，标注在 Issue 标签上"
+
+  affected:
+    label: "影响范围"
+    required: false
+    prompt: "只有你遇到还是都遇到了？"
+    example: "财务团队全员"
+
+  unknowns:
+    label: "还没确认的信息"
+    required: false
+
+guidance: |
+  1. 报 Bug 和提需求的最大区别：Bug 追问复现步骤和环境，需求追问痛点和期望。
+  2. severity 你初步判断，技术 Agent 收到后会再评估。
+  3. 如果人提供的信息不足以复现，标出来，技术 Agent 会追问。
