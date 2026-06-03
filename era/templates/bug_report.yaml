@@ -1,7 +1,11 @@
 # 报 Bug 模板
 
 type: bug_report
-version: "0.1"
+version: "0.2"
+
+# ⭐ provenance(amplifier 铁律):每个由人提供的字段,值都带 source 标注——
+#   stated / inferred / unconfirmed(见 feature_request.yaml 与
+#   discussions/2026-06-04-amplifier-not-proxy.md)。inferred 的内容回放时必须显式说"这条是我替你补的"。
 
 fields:
   title:
@@ -52,7 +56,19 @@ fields:
     label: "还没确认的信息"
     required: false
 
+  representability:
+    label: "代言可信度(amplifier 弃权出口)"
+    required: true
+    options:
+      - "high（现象清楚，我有把握忠实转述）"
+      - "partial（部分吃不准，已在 unknowns 标出）"
+      - "low（我复述不准，建议人直接参与）"
+    note: >
+      agent 自评:我对现象/复现的转述有多大把握忠实?
+      为 low 时不要硬凑——如实说吃不准,把人拉进来。
+
 guidance: |
   1. 报 Bug 和提需求的最大区别：Bug 追问复现步骤和环境，需求追问痛点和期望。
   2. severity 你初步判断，技术 Agent 收到后会再评估。
   3. 如果人提供的信息不足以复现，标出来，技术 Agent 会追问。
+  4. ⭐ 每个字段标 source(stated/inferred/unconfirmed);填 representability,为 low 时如实弃权,别编复现步骤。

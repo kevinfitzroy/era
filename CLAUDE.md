@@ -1,5 +1,9 @@
 # AI Agent 时代的项目管理与新沟通方式
 
+> **🧭 北极星:本项目里的 agent 是 amplifier(放大器),不是 proxy(代理人)。**
+> 把真实信息/分歧暴露给人(翻译 + 放大 + 标注出处),决定权与制衡权始终在人。
+> 详见 [`discussions/2026-06-04-amplifier-not-proxy.md`](discussions/2026-06-04-amplifier-not-proxy.md)。
+
 ## 这个项目做什么
 
 讨论 **AI agent 深度参与后，项目管理和团队沟通该怎么变**。不只限于软件工程——可以涵盖任何需要多人+多 agent 协作的综合性项目。

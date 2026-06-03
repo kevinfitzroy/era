@@ -1,11 +1,19 @@
 # 提需求模板
 
 type: feature_request
-version: "0.1"
+version: "0.2"
 
 # 使用方式：
 # Agent 把下面字段变成自然语言提问，引导人逐步描述。
 # 产出的 YAML 写入 Issue 正文。
+#
+# ⭐ provenance(amplifier 铁律,见 discussions/2026-06-04-amplifier-not-proxy.md):
+#   每个由人提供的字段,值都要带一个 source 标注——
+#     stated      = 人明确说过的(原话或贴近原话)
+#     inferred    = agent 推断/补充的(人没说,你替他补的)
+#     unconfirmed = 还没跟人确认的
+#   写法:在该字段下加 `source: stated|inferred|unconfirmed`。
+#   inferred 的内容,回放时必须显式告诉人"这条是我替你补的"——你是 amplifier,不是替人造信息的 proxy。
 
 fields:
   title:
@@ -42,9 +50,23 @@ fields:
     required: false
     note: "Agent 自动识别对话中的信息缺口，列在这里"
 
+  representability:
+    label: "代言可信度(amplifier 弃权出口)"
+    required: true
+    options:
+      - "high（人说得清，我有把握忠实代言）"
+      - "partial（部分吃不准，已在 unknowns 标出）"
+      - "low（我代表不了，建议人直接参与/直连对方）"
+    note: >
+      agent 自评:我这次转述+补齐,有多大把握忠实代表了人的本意?
+      为 low 时不要硬凑一个完整 YAML——如实说"这个我吃不准",把人拉进来,或建议两个人直接谈。
+      proxy 必须替你发声;amplifier 允许弃权。
+
 # Agent 使用指南
 guidance: |
   1. 不要直接把这个 YAML 丢给人看——把字段变成你的话术。
   2. 先问 problem，再问 expectation，最后补 context 和 impact。
   3. 对话中发现了信息缺口，填到 unknowns，不用再追问（除非关键）。
-  4. 人确认后，用这个格式写 GitHub Issue。
+  4. ⭐ 每个字段标 source(stated/inferred/unconfirmed);inferred 的内容回放时显式说"这条是我替你补的"。
+  5. ⭐ 填 representability;为 low 时不硬凑,如实弃权。
+  6. 人确认后写 GitHub Issue。你产出的是给人审"对照"的材料,不是替人拍板的结论。

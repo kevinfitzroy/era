@@ -1,6 +1,10 @@
 # ERA — Entity Representative Agent
 
-一套**团队内部协作的沟通框架**。核心假设：**每个成员都由 AI agent 替自己发声**，整个工作流程由 agent 把控。
+一套**团队内部协作的沟通框架**。核心假设：**每个成员都由自己的 AI agent 替自己发声**——agent 替你把话说清、把分歧摆明，但**决定权和制衡权始终在人**。
+
+> **🧭 定位北极星:agent 是 amplifier(放大器),不是 proxy(代理人)。**
+> agent 的职责是把**真实信息**和**真实分歧**低成本地暴露给人(翻译 + 放大 + 标注出处),**不是**替人交换信息、替人达成共识、替人决策。
+> 详见 [`discussions/2026-06-04-amplifier-not-proxy.md`](discussions/2026-06-04-amplifier-not-proxy.md)。
 
 ## 快速导航
 
