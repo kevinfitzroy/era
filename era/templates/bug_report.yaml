@@ -1,7 +1,7 @@
 # 报 Bug 模板
 
 type: bug_report
-version: "0.2"
+version: "0.3"
 
 # ⭐ provenance(amplifier 铁律):每个由人提供的字段,值都带 source 标注——
 #   stated / inferred / unconfirmed(见 feature_request.yaml 与
@@ -67,8 +67,18 @@ fields:
       agent 自评:我对现象/复现的转述有多大把握忠实?
       为 low 时不要硬凑——如实说吃不准,把人拉进来。
 
+  signoff:
+    label: "差异驱动确认记录(sign-off)"
+    required: false           # 但 severity=high/critical 时必填,见 note
+    note: >
+      记录 sign-off 逐条拍的结果:confirmed / corrected / unconfirmed。纯 stated 无歧义不必记;
+      被改写/补充的字段(尤其 symptom、steps_to_reproduce、severity)附人原话(human_said)作对照基准。
+      ⚠️ severity=high/critical 时**必填**:技术 agent 不该基于未经人确认的高危描述开工。
+
 guidance: |
   1. 报 Bug 和提需求的最大区别：Bug 追问复现步骤和环境，需求追问痛点和期望。
   2. severity 你初步判断，技术 Agent 收到后会再评估。
   3. 如果人提供的信息不足以复现，标出来，技术 Agent 会追问。
   4. ⭐ 每个字段标 source(stated/inferred/unconfirmed);填 representability,为 low 时如实弃权,别编复现步骤。
+  5. ⭐ sign-off 用差异驱动审对照(见 protocol「审对照确认」):只逐条让人拍 inferred/unconfirmed/被你改写的点(尤其 severity、复现步骤),别念整段回放求点头;被改写/补充的附原话作对照,结果记进 signoff。
+  6. ⭐ severity=high/critical 的 bug,sign-off **必做**——未经人确认的高危描述,技术 agent 不开工。

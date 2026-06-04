@@ -1,7 +1,7 @@
 # 提需求模板
 
 type: feature_request
-version: "0.2"
+version: "0.3"
 
 # 使用方式：
 # Agent 把下面字段变成自然语言提问，引导人逐步描述。
@@ -62,11 +62,28 @@ fields:
       为 low 时不要硬凑一个完整 YAML——如实说"这个我吃不准",把人拉进来,或建议两个人直接谈。
       proxy 必须替你发声;amplifier 允许弃权。
 
+  signoff:
+    label: "差异驱动确认记录(sign-off)"
+    required: false
+    note: >
+      记录 sign-off 逐条拍的结果:confirmed / corrected(连人改成了什么) / unconfirmed。
+      纯 stated 无歧义的不必逐条记;被改写或补充的字段附人的原话片段(human_said)作对照基准。
+    example:
+      - field: expectation
+        verdict: corrected
+        source: inferred
+        agent_had: "3 秒内返回（我替你定的指标）"
+        human_said: "5 秒就行"
+      - field: problem
+        verdict: confirmed
+        source: stated
+
 # Agent 使用指南
 guidance: |
   1. 不要直接把这个 YAML 丢给人看——把字段变成你的话术。
   2. 先问 problem，再问 expectation，最后补 context 和 impact。
   3. 对话中发现了信息缺口，填到 unknowns，不用再追问（除非关键）。
-  4. ⭐ 每个字段标 source(stated/inferred/unconfirmed);inferred 的内容回放时显式说"这条是我替你补的"。
-  5. ⭐ 填 representability;为 low 时不硬凑,如实弃权。
-  6. 人确认后写 GitHub Issue。你产出的是给人审"对照"的材料,不是替人拍板的结论。
+  4. ⭐ 每个字段标 source(stated/inferred/unconfirmed)。
+  5. ⭐ sign-off 用**差异驱动审对照**(见 protocol「审对照确认」):只逐条让人拍 inferred / unconfirmed / 被你改写语义的点;纯 stated 无歧义的默认采纳,允许人一句话调出全文对照。别念整段回放求点头。
+  6. ⭐ 被改写/补充的字段在 issue 附人的**原话片段**作对照基准(纯 stated 不必附);填 representability,为 low 时如实弃权;把逐条确认结果记进 signoff。
+  7. 人逐条确认后写 GitHub Issue。你产出的是给人审"对照"的材料,不是替人拍板的结论。
