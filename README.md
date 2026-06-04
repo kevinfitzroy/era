@@ -12,7 +12,7 @@
 |--------|--------|
 | **新成员（人）** | 看下面"新成员上手" |
 | **AI Agent** | 读 `era/protocol.md`，然后看你的身份文件 `era/identities/` |
-| **方法论维护者** | 读 `discussions/` 了解设计背景，改 `era/` 下的文件 |
+| **方法论维护者** | 读 `discussions/` 了解设计背景，改 `era/` 下的文件;`challenges/` 看方法论的已知弱点 |
 
 ## 新成员上手
 
@@ -36,7 +36,8 @@
 │       ├── bug_report.yaml
 │       ├── design_review.yaml
 │       └── direct_talk.yaml    # 人直连旁路:两个人绕过 agent 直接谈
-└── discussions/           # 方法论的设计讨论记录（人类阅读，Agent 不需要）
+├── discussions/           # 方法论的设计讨论记录（人类阅读，Agent 不需要）
+└── challenges/            # ⚔️ 对方法论本身的常设对抗挑战(永久留存,不 close)
 ```
 
 ## 一句话小结
