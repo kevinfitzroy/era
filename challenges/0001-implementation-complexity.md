@@ -60,7 +60,7 @@ N 个人要 N 台常驻 host + Maestro + agent + AR + 语音,**先把整个机�
 
 "会不会太复杂"这个问题,只有让真实团队跑**最小版**才答得出。所以先砍到最小,跑起来,
 让疼痛告诉你该加回哪一条。
-本挑战是 [#11 真实试跑](https://github.com/kevinfitzroy/entity-representative-agent/issues/11)
+本挑战是 #11 真实试跑
 的**前置**:先定最小可跑集,再谈试跑。
 
 ## 回应

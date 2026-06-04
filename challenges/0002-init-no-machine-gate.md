@@ -26,6 +26,6 @@
 
 ## 为什么本阶段 accepted-wontfix
 
-用户 2026-06-04 选「ERA 契约 + Maestro 脚手架」(只改 ERA repo、给 Maestro 对接工具),把 Maestro **启动 gate**(档 C)留到"疼了再开",符合 `0001` 的 MVP 纪律:先用最小硬度跑真实试跑([#11](https://github.com/kevinfitzroy/entity-representative-agent/issues/11)),让实操暴露"到底会不会被蒙混",再决定上不上 gate。
+用户 2026-06-04 选「ERA 契约 + Maestro 脚手架」(只改 ERA repo、给 Maestro 对接工具),把 Maestro **启动 gate**(档 C)留到"疼了再开",符合 `0001` 的 MVP 纪律:先用最小硬度跑真实试跑(#11),让实操暴露"到底会不会被蒙混",再决定上不上 gate。
 
 **升级触发**:真实试跑中若出现身份漂移 / 蒙混 → 提级档 C:Maestro 在起 agent 前检查工作目录有无合法 `IDENTITY.md`,缺失则强制进认领模式、不放行正常工作(契约 `era/onboarding/subproject-contract.md` 已为此预留对接点)。

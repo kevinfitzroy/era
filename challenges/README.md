@@ -12,7 +12,7 @@
 - **文件夹 = append-only**:可 diff、永远在仓库树里可见、git 留痕。一条挑战被回应后**不删除**,
   只在末尾追加「回应」段。
 
-这本身就是 [issue #3](https://github.com/kevinfitzroy/entity-representative-agent/issues/3)
+这本身就是 issue #3
 (同模型 agent 易达成虚假共识)的解药:把"有人真的反对过"做成**不可被静默关闭**的常驻记录。
 
 ## 它和 `red_team` lens 什么关系
@@ -46,7 +46,7 @@
    有问题,去找它)。至少产出一条新挑战,或确认某条旧挑战已解。
 2. 这把 fidelity 的"主动暴露失真"从**个人层面**(单个 agent 对自己的人保真)提到了**方法论层面**
    (方法论也得对自己保真,不许自我感觉良好)。
-3. 与 [#11 真实试跑](https://github.com/kevinfitzroy/entity-representative-agent/issues/11)
+3. 与 #11 真实试跑
    联动:试跑暴露的"方法论本身的问题"沉淀到这里;这里 `open` 的挑战 = 试跑要重点验证的假设。
 
 ## 状态总览
