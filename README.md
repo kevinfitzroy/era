@@ -4,8 +4,9 @@
 > agent 是**放大器**(amplifier)——把人的真实想法和分歧翻译、放大、标注出处地暴露出来;
 > **不是代理人**(proxy)——不替人决策、不替人达成共识。**决定权始终在人。**
 
-> ℹ️ **本仓库是 ERA 方法论的公开只读镜像**,供对外了解与引用。
-> 实操部署、以及各自 Maestro / agent 的方法论同步,**请勿以本镜像为同步源**——用你自己的部署。
+> 📡 **本仓库是 ERA 方法论的公开同步源。**
+> 各 host 的 Maestro / agent 从这里同步 ERA 方法论——公开 repo 免鉴权,任何 host 直接拉:
+> `git clone https://github.com/kevinfitzroy/era.git`,之后 `git pull` 取最新。
 
 ---
 
