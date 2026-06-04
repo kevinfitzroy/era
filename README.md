@@ -27,6 +27,7 @@
 ├── README.md              ← 你在这
 ├── era/                   ← 方法论本体（Agent 必读）
 │   ├── protocol.md        # Agent ↔ Agent 沟通协议
+│   ├── fidelity.md        # 保真度量:agent 在 amplify 还是 distort
 │   ├── identities/        # 角色身份模板
 │   │   ├── business.yaml
 │   │   └── tech.yaml
