@@ -4,6 +4,18 @@
 > 把真实信息/分歧暴露给人(翻译 + 放大 + 标注出处),决定权与制衡权始终在人。
 > 详见 [`discussions/2026-06-04-amplifier-not-proxy.md`](discussions/2026-06-04-amplifier-not-proxy.md)。
 
+## ⛔ 先确定你的来意
+
+你拿到这个 repo,**第一件事是判断你为什么在这**——两条路,别走错:
+
+- **你是来替某个人实操代言的**(团队成员的 agent,工作目录是 Maestro 建出来的 ERA subproject)
+  → **立刻去 [`era/protocol.md`](era/protocol.md) §0 做初始化握手,认领身份**。没认领、没生成 `IDENTITY.md` 之前,不准处理任何 issue / PR / 需求。这是你的主线,本文件下面的内容不用读。
+- **你是来维护 / 共创这套方法论的**(改 `era/`、参与 `discussions/` 与 `challenges/`)
+  → 往下读本文件。
+
+> 怎么判断?工作目录根有 `IDENTITY.md`、或你将要握手生成它 → 你是实操代言 agent。
+> 一个合规 subproject 怎么建,见 [`era/onboarding/subproject-contract.md`](era/onboarding/subproject-contract.md)。
+
 ## 这个项目做什么
 
 讨论 **AI agent 深度参与后，项目管理和团队沟通该怎么变**。不只限于软件工程——可以涵盖任何需要多人+多 agent 协作的综合性项目。

@@ -17,17 +17,23 @@
 ## 新成员上手
 
 1. 建好自己的 Host，部署 Maestro 总控 Agent
-2. `git clone` 本仓库
-3. 运行初始化：Maestro 会读取 `era/identities/`，你认领一个角色
+2. 让 Maestro 用脚手架建你的工作目录：`era/onboarding/era-onboard.sh <work-dir>`(把**全量方法论 `era/`** 拉进去,工作目录 = 本仓库 clone)
+3. **强制初始化握手**：agent 启动会被工作目录根 `CLAUDE.md` 按来意分流到 `era/protocol.md` §0——它**停下来问你**(你代表谁、认领哪个角色),认领前不做任何别的事；认领结果锚定在 `IDENTITY.md`,防身份漂移
 4. 之后你的 Agent 会按角色引导你——提需求、报问题、审方案
+
+> 一个合规 subproject 必须满足什么、Maestro 怎么建,见 [`era/onboarding/subproject-contract.md`](era/onboarding/subproject-contract.md)。
 
 ## 目录结构
 
 ```
 ├── README.md              ← 你在这
 ├── era/                   ← 方法论本体（Agent 必读）
-│   ├── protocol.md        # Agent ↔ Agent 沟通协议
+│   ├── protocol.md        # Agent ↔ Agent 沟通协议(含 §0 强制初始化握手)
 │   ├── fidelity.md        # 保真度量:agent 在 amplify 还是 distort
+│   ├── IDENTITY.template.md   # 身份锚模板:§0 握手认领后复制为工作目录 IDENTITY.md
+│   ├── onboarding/        # 实操上手:subproject 怎么建合规
+│   │   ├── subproject-contract.md  # 合规契约 + Maestro 对接说明
+│   │   └── era-onboard.sh          # 脚手架:一条命令把工作目录建合规
 │   ├── identities/        # 角色身份模板
 │   │   ├── business.yaml
 │   │   └── tech.yaml

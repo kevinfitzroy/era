@@ -1,2 +1,5 @@
 .*
 !.gitignore
+
+# 成员实操的身份锚是 per-person 实例数据,不进公共 repo(见 era/protocol.md §0)
+/IDENTITY.md

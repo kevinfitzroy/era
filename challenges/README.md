@@ -54,3 +54,4 @@
 | # | 挑战 | 靶子 | 状态 |
 |---|------|------|------|
 | [0001](0001-implementation-complexity.md) | 整套机制太重、且无人执行,可能立不起来 | 方法论整体 / 可实施性 | `open` |
+| [0002](0002-init-no-machine-gate.md) | 初始化握手没有机器 gate,仍靠 agent 自觉 | §0 握手 / 强制力 | `accepted-wontfix` |
