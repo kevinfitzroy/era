@@ -44,6 +44,7 @@ ERA 的赌注是——**别让人去学"怎么把话说好",让每个人的 agen
 | 角色身份模板 | `era/identities/`(业务 / 技术) |
 | 沟通格式模板 | `era/templates/`(需求 / bug / 方案评审 / 人直连) |
 | 保真度量 | `era/fidelity.md` |
+| **我是新人,想知道怎么用** | `era/onboarding/walkthrough.md` |
 | 想自己部署一个 subproject | `era/onboarding/subproject-contract.md` |
 | 设计讨论记录 | `discussions/` |
 | 对方法论本身的对抗挑战 | `challenges/` |
