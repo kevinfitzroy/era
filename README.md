@@ -33,7 +33,8 @@
 │   └── templates/         # 沟通 YAML 模板
 │       ├── feature_request.yaml
 │       ├── bug_report.yaml
-│       └── design_review.yaml
+│       ├── design_review.yaml
+│       └── direct_talk.yaml    # 人直连旁路:两个人绕过 agent 直接谈
 └── discussions/           # 方法论的设计讨论记录（人类阅读，Agent 不需要）
 ```
 

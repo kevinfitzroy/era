@@ -1,0 +1,57 @@
+# 人直连模板(Human Direct Channel)
+
+type: direct_talk
+version: "0.1"
+
+# 用途:两个人决定绕过 agent 转述、直接对话时,用一个 direct-talk issue 留痕。
+# 见 era/protocol.md「人直连旁路」+ discussions/2026-06-04-human-direct-channel.md。
+# 你是 amplifier:直连时不传话;经双方授权可当旁注书记员,记录 + 回填,标 source。
+
+fields:
+  topic:
+    label: "议题(一句话)"
+    required: true
+    example: "报表加速方案的优先级,两边一直没对齐"
+
+  origin:
+    label: "来自哪个 issue/PR"
+    required: true
+    example: "#12"
+
+  participants:
+    label: "直连双方"
+    required: true
+    example: ["@业务-张三", "@技术-李四"]
+
+  channel:
+    label: "载体"
+    required: true
+    options:
+      - "direct-talk issue（带内,两人自己在底下聊）"
+      - "外部实时（电话/视频/IM,牵线后把结论回填本 issue）"
+
+  agent_role:
+    label: "agent 角色(需双方授权)"
+    required: true
+    options:
+      - "scribe（旁注书记员:旁听 + 记录 + 回填）"
+      - "off（完全退场,人事后口述给 agent 回填）"
+    note: "任一方不授权旁听 → off。"
+
+  conclusion:
+    label: "直连结论"
+    required: false
+    note: >
+      直连结束后填。每条标 source:stated(人直接说的) / inferred(agent 整理的)。
+      结论以人直接确认为准,agent 不得改写实质。
+
+  followup:
+    label: "回填去向"
+    required: false
+    example: "已回填 #12;原 issue 锚点更新为 '✅ 直连已结论'"
+
+guidance: |
+  1. 任一方的人想直连,立刻照办,别劝阻——直连是人的基本权利。
+  2. 先在原 issue 留锚点(🔀 已转入直连),再开本 issue。
+  3. 直连期间不传话;经双方授权才旁听记录。
+  4. 结束后结构化回填,标 source;关闭本 issue,更新原 issue 锚点为 ✅。
